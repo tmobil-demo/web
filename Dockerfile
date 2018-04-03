@@ -1,5 +1,6 @@
 FROM tmobiledemo/base
 MAINTAINER Jindřich Káňa <jindrich.kana@gmail.com>
+
 LABEL Vendor="kanaajin"
 
 ADD https://raw.githubusercontent.com/tmobil-demo/app/master/run-httpd.sh /usr/local/bin/
