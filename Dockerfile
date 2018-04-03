@@ -1,8 +1,7 @@
 FROM tmobiledemo/base
 
 MAINTAINER Jindřich Káňa <jindrich.kana@gmail.com>
-
-LABEL Vendor="kanaajin"
+LABEL Vendor="T-Mobile"
 
 ADD https://raw.githubusercontent.com/tmobil-demo/app/master/run-httpd.sh /usr/local/bin/
 ADD https://raw.githubusercontent.com/tmobil-demo/app/master/reviews.html /var/www/html/
@@ -13,4 +12,5 @@ RUN find /var/www/html/ -type d -exec chmod 755 {} \; \
     && chmod -v +x /usr/local/bin/run-httpd.sh
 
 EXPOSE 8080
+
 CMD ["/usr/local/bin/run-httpd.sh"]
